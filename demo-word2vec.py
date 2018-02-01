@@ -136,6 +136,12 @@ def test_2(model):
     print(" -> " + model.wv.doesnt_match(t6))
 
 
+def test_3(model):
+    t1 = "足球"
+
+    print(model.wv.most_similar(t1))
+
+
 if __name__ == '__main__':
 
     logging.basicConfig(format="%(asctime)s : %(levelname)s : %(message)s", level=logging.INFO)  # 显示INFO等级以上日志
@@ -144,6 +150,6 @@ if __name__ == '__main__':
 
     manager.load_model()
 
-    manager.test_model(test_2)
+    manager.test_model(test_3)
 
 
